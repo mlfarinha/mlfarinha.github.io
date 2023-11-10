@@ -81,9 +81,9 @@ analytics:
 # Site Author
 author:
   name             : "Miguel Farinha"
-  avatar           : "profile.png"
+  avatar           : "profile_miguel.jpg"
   bio              : 
-  location         :
+  location         : " "
   employer         : "University of Oxford"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=HE6se3sAAAAJ&hl=en-EN"
