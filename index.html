@@ -227,15 +227,31 @@
           </td>
           <td style="padding:20px;width:75%;vertical-align:middle">
             <papertitle>Estimating Geometry and Pose for Scene Reconstruction</papertitle>
+            <p class="summary">Unifying depth and camera motion estimation from RGB images to enable consistent 3D scene reconstruction.</p>
+            
+            <a href="javascript:void(0)" class="toggle-overview">[Overview]</a>
+            <div class="abstract" style="display:none;">
+              This project develops a framework that jointly estimates scene geometry (depth) 
+              and camera motion directly from pairs of RGB images. We combine <strong>visual 
+              foundation models</strong> (e.g., SD3.5, DINOv2) with <strong>geometric optimization</strong> 
+              to refine predictions into a consistent 3D representation.  
+              <br><br>
+              Our approach performs gradient descent over a simple least-squares objective, 
+              aligning predicted optical flow with correspondences from an off-the-shelf 
+              flow estimator. By fine-tuning pretrained foundation models to predict 
+              affine-invariant depth and optical flow jointly, we bridge geometry and motion 
+              estimation in a single unified system.  
+              <br><br>
+              <strong>Contribution:</strong> A method that integrates learning-based priors with 
+              optimization, enabling robust 3D scene reconstruction from multiple RGB views.
+            </div>
+
             <!--
             <div>
               [ <a target="_blank" href="https://github.com/mlfarinha/sd3-scene-reconstruction/tree/sd3.5-flow-depth-dpt">Code</a> ]
             </div>
             -->
-            <br>
-            <p class="abstract">
-              We combine visual foundation models with geometric optimization to jointly estimate consistent geometry and motion of a scene. Our optimization performs gradient descent minimization of a simple least-squares objective by comparing the optical flow induced by affine-invariant depth and camera pose estimates against correspondences obtained via an off-the-shelf optical flow method. We adapt and fine-tune the visual foundation models (SD3.5, DINOv2) to jointly estimate affine-invariant depth and optical flow from a pair of RGB images. Our method unifies geometry and motion estimation, enabling the reconstruction of 3D scenes from multiple views.
-            </p>
+
             <div class="phone-teasers" style="display: flex; justify-content: center; margin-top: 1em;">
               <img class="phone-teasers" src="images/super3d_overview.pdf" alt="hpp" style="border-style: none" width="300">
             </div>
@@ -247,15 +263,31 @@
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <papertitle>Scene Understanding and Perception using Multi-view Diffusion Priors</papertitle>
+              <p class="summary">Building complete 3D scene models, including geometry and material properties, from multi-view RGB images.</p>
+              
+              <a href="javascript:void(0)" class="toggle-overview">[Overview]</a>
+              <div class="abstract" style="display:none;">
+                This work aims to recover a full 3D representation of indoor scenes — geometry 
+                (depth and normals) and appearance (SVBRDF) — directly from RGB images.  
+                <br><br>
+                We adapt the <strong>Stable Video Diffusion</strong> model to a multi-view setting, 
+                conditioning it on several images of a scene and training it to output depth 
+                maps, surface normals, and spatially varying reflectance properties. This 
+                approach leverages <strong>diffusion priors</strong> for learning consistent multi-view 
+                geometry and appearance estimation.  
+                <br><br>
+                <strong>Contribution:</strong> A novel diffusion-based method that jointly estimates 
+                geometry and SVBRDFs, providing a complete 3D scene model. This enables 
+                downstream applications such as relighting, novel view synthesis, and 3D 
+                reconstruction.
+              </div>
+              
               <!--
               <div>
                 [ <a target="_blank" href="https://github.com/mlfarinha/sd-3d-modelling">Code</a> ]
               </div>
               -->
-              <br>
-              <p class="abstract">
-                We propose a novel method for 3D scene understanding and perception that leverages multi-view diffusion priors to jointly estimate geometry and SVBRDF of indoor scenes. This is achieved by adapting the pre-trained Stable Video Diffusion model by conditioning it on multiple views of a scene, and training it to output depth and normal maps, as well as the spatially varying BRDF of a scene. The proposed model provides a complete 3D model of the scene enabling various downstream tasks such as relighting, novel view synthesis, and 3D reconstruction.
-              </p>
+
               <div class="phone-teasers" style="display: flex; justify-content: center; margin-top: 1em;">
                 <img class="phone-teasers" src="images/svd_relighting.pdf" alt="hpp" style="border-style: none" width="300">
               </div>
@@ -265,6 +297,22 @@
     </tr>
   </table>
   Template from <a target="_blank" href="https://jonbarron.info/">Jon Barron</a>.
+
+  <script>
+    document.querySelectorAll('.toggle-overview').forEach(link => {
+      link.addEventListener('click', () => {
+        const abstract = link.nextElementSibling;
+        if (abstract.style.display === "none") {
+          abstract.style.display = "block";
+          link.textContent = "[Hide Overview]";
+        } else {
+          abstract.style.display = "none";
+          link.textContent = "[Overview]";
+        }
+      });
+    });
+  </script>
+  
 </body>
 
 </html>
