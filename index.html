@@ -219,110 +219,112 @@
               </div>
             </td>
           </tr>
-
-          <h2>Past Works</h2>
-          <table style="width:100%;border:0;margin:auto;"><tbody>
-  
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle" class="comp-teasers">
-                <img src="images/clouds.jpg" alt="hpp" style="border-style:none;width:350px">
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Volumetric Cloud Field Reconstruction</papertitle>
-                <span style="font-size:13px;">
-                  Jacob Lin, <strong>Miguel Farinha</strong>, Edward Gryspeerdt, Ronald Clark
-                </span>
-                <br>
-                <em>arxiv, 2023</em>
-                <br>
-                <div>
-                  [
-                    <a target="_blank" href="https://arxiv.org/abs/2311.17657">Paper</a>  &nbsp;/&nbsp;
-                    <a target="_blank" href="https://cloud-field.github.io">Project Page</a>
-                  ]
-                </div>
-                <p class="summary">
-                  Reconstructing cloud density and motion fields from sparse stereo pairs using deep learning.
-                </p>
-                
-                <a href="javascript:void(0)" class="toggle-overview">[Overview]</a>
-                <div class="abstract" style="display:none;">
-                  Volumetric phenomena such as clouds are challenging to reconstruct because of their 
-                  translucent appearance and complex light–scattering properties. Most existing 
-                  approaches rely on controlled lab setups or expensive satellite data, which limits 
-                  real-world applicability.  
-                  <br><br>
-                  We propose a novel framework that integrates a <strong>stereo depth carving module</strong>, 
-                  a <strong>3D CNN</strong>, and an <strong>advection module</strong>. The stereo module provides 
-                  coarse volume boundaries by carving empty space from stereo depth. The 3D CNN then 
-                  predicts volumetric density fields, while the advection module leverages temporal 
-                  dynamics to estimate velocity fields and enforce temporal consistency.  
-                  <br><br>
-                  <strong>Contributions:</strong>  
-                  (1) A stereo depth carving module that enables volumetric reconstruction from sparse views.  
-                  (2) An advection module that models temporal evolution, improving shape and motion 
-                  consistency.  
-                  (3) Two cloud datasets: a synthetic dataset for training and a real-world dataset for 
-                  evaluation, demonstrating accurate recovery of cloud geometry and motion from few 
-                  stereo pairs.
-                </div>
-                <div class="phone-teasers" style="display:flex;justify-content:center;margin-top:1em;">
-                  <img class="phone-teasers" src="images/clouds.jpg" alt="hpp" style="border-style:none;width:300px">
-                </div>
-              </td>
-            </tr>
-  
-            <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle" class="comp-teasers">
-                <img src="images/gensynth.jpg" alt="GENSYNTH teaser" style="border-style:none;width:350px">
-              </td>
-              <td style="padding:20px;width:75%;vertical-align:middle">
-                <papertitle>Debiasing Vision-Language Datasets with Synthetic Contrast Sets</papertitle>
-                <span style="font-size:13px;">
-                  Brandon Smith<sup>*</sup>, <strong>Miguel Farinha<sup>*</sup></strong>, 
-                  Siobhan Mackenzie Hall, Hannah Rose Kirk, Aleksandar Shtedritski, Max Bain
-                </span>
-                <br>
-                <em>NeurIPS 2023 Workshop SyntheticData4ML</em>
-                <br>
-                <div>
-                  [
-                    <a target="_blank" href="https://arxiv.org/abs/2305.15407">Paper</a>  &nbsp;/&nbsp;
-                    <a target="_blank" href="https://github.com/oxai/debias-gensynth">Code</a>
-                  ]
-                </div>
-                <p class="summary">
-                  Synthetic gender-balanced contrast sets for debiasing vision-language models.
-                </p>
-                
-                <a href="javascript:void(0)" class="toggle-overview">[Overview]</a>
-                <div class="abstract" style="display:none;">
-                  This work aims to evaluate and improve the reliability of <strong>model bias</strong>
-                  measurements in vision-language models (VLMs).
-                  <br><br>
-                  We argue that measurements of <strong>model bias</strong> lack validity due to <strong>dataset bias</strong>. 
-                  We demonstrate this by showing the COCO Captions dataset, the most commonly used dataset for evaluating bias, 
-                  contains spurious correlations between background context and the gender of people in-situ. To address this issue, 
-                  we propose a novel dataset debiasing pipeline to augment the COCO dataset with synthetic, 
-                  gender-balanced contrast sets, where only the gender of the subject is edited and the
-                  background is fixed.  
-                  <br><br>
-                  <strong>Contribution:</strong>  
-                  (1) We demonstrate spurious correlations in the COCO dataset between gender
-                  and context, and show their problematic effects when used to measure model bias;  
-                  (2) We present the <strong>GENSYNTH</strong> dataset, built from a generative pipeline for synthetic image editing, and a
-                  filtering pipeline using KNN with real and synthetic images to control for the quality of the generated
-                  images;  
-                  (3) We benchmark CLIP models on our GENSYNTH dataset, which has no
-                  spurious correlation, and cast doubts on the effectiveness of debiasing methods.
-                </div>
-                <div class="phone-teasers" style="display:flex;justify-content:center;margin-top:1em;">
-                  <img class="phone-teasers" src="images/gensynth.jpg" alt="hpp" style="border-style:none;width:300px">
-                </div>
-              </td>
-            </tr>
-
         </tbody></table>
+
+        <h2>Past Works</h2>
+        <table style="width:100%;border:0;margin:auto;"><tbody>
+  
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle" class="comp-teasers">
+              <img src="images/clouds.jpg" alt="hpp" style="border-style:none;width:350px">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>Volumetric Cloud Field Reconstruction</papertitle>
+              <span style="font-size:13px;">
+                Jacob Lin, <strong>Miguel Farinha</strong>, Edward Gryspeerdt, Ronald Clark
+              </span>
+              <br>
+              <em>arxiv, 2023</em>
+              <br>
+              <div>
+                [
+                  <a target="_blank" href="https://arxiv.org/abs/2311.17657">Paper</a>  &nbsp;/&nbsp;
+                  <a target="_blank" href="https://cloud-field.github.io">Project Page</a>
+                ]
+              </div>
+              <p class="summary">
+                Reconstructing cloud density and motion fields from sparse stereo pairs using deep learning.
+              </p>
+              
+              <a href="javascript:void(0)" class="toggle-overview">[Overview]</a>
+              <div class="abstract" style="display:none;">
+                Volumetric phenomena such as clouds are challenging to reconstruct because of their 
+                translucent appearance and complex light–scattering properties. Most existing 
+                approaches rely on controlled lab setups or expensive satellite data, which limits 
+                real-world applicability.  
+                <br><br>
+                We propose a novel framework that integrates a <strong>stereo depth carving module</strong>, 
+                a <strong>3D CNN</strong>, and an <strong>advection module</strong>. The stereo module provides 
+                coarse volume boundaries by carving empty space from stereo depth. The 3D CNN then 
+                predicts volumetric density fields, while the advection module leverages temporal 
+                dynamics to estimate velocity fields and enforce temporal consistency.  
+                <br><br>
+                <strong>Contributions:</strong>  
+                (1) A stereo depth carving module that enables volumetric reconstruction from sparse views.  
+                (2) An advection module that models temporal evolution, improving shape and motion 
+                consistency.  
+                (3) Two cloud datasets: a synthetic dataset for training and a real-world dataset for 
+                evaluation, demonstrating accurate recovery of cloud geometry and motion from few 
+                stereo pairs.
+              </div>
+              <div class="phone-teasers" style="display:flex;justify-content:center;margin-top:1em;">
+                <img class="phone-teasers" src="images/clouds.jpg" alt="hpp" style="border-style:none;width:300px">
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle" class="comp-teasers">
+              <img src="images/gensynth.jpg" alt="GENSYNTH teaser" style="border-style:none;width:350px">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>Debiasing Vision-Language Datasets with Synthetic Contrast Sets</papertitle>
+              <span style="font-size:13px;">
+                Brandon Smith<sup>*</sup>, <strong>Miguel Farinha<sup>*</sup></strong>, 
+                Siobhan Mackenzie Hall, Hannah Rose Kirk, Aleksandar Shtedritski, Max Bain
+              </span>
+              <br>
+              <em>NeurIPS 2023 Workshop SyntheticData4ML</em>
+              <br>
+              <div>
+                [
+                  <a target="_blank" href="https://arxiv.org/abs/2305.15407">Paper</a>  &nbsp;/&nbsp;
+                  <a target="_blank" href="https://github.com/oxai/debias-gensynth">Code</a>
+                ]
+              </div>
+              <p class="summary">
+                Synthetic gender-balanced contrast sets for debiasing vision-language models.
+              </p>
+              
+              <a href="javascript:void(0)" class="toggle-overview">[Overview]</a>
+              <div class="abstract" style="display:none;">
+                This work aims to evaluate and improve the reliability of <strong>model bias</strong>
+                measurements in vision-language models (VLMs).
+                <br><br>
+                We argue that measurements of <strong>model bias</strong> lack validity due to <strong>dataset bias</strong>. 
+                We demonstrate this by showing the COCO Captions dataset, the most commonly used dataset for evaluating bias, 
+                contains spurious correlations between background context and the gender of people in-situ. To address this issue, 
+                we propose a novel dataset debiasing pipeline to augment the COCO dataset with synthetic, 
+                gender-balanced contrast sets, where only the gender of the subject is edited and the
+                background is fixed.  
+                <br><br>
+                <strong>Contribution:</strong>  
+                (1) We demonstrate spurious correlations in the COCO dataset between gender
+                and context, and show their problematic effects when used to measure model bias;  
+                (2) We present the <strong>GENSYNTH</strong> dataset, built from a generative pipeline for synthetic image editing, and a
+                filtering pipeline using KNN with real and synthetic images to control for the quality of the generated
+                images;  
+                (3) We benchmark CLIP models on our GENSYNTH dataset, which has no
+                spurious correlation, and cast doubts on the effectiveness of debiasing methods.
+              </div>
+              <div class="phone-teasers" style="display:flex;justify-content:center;margin-top:1em;">
+                <img class="phone-teasers" src="images/gensynth.jpg" alt="hpp" style="border-style:none;width:300px">
+              </div>
+            </td>
+          </tr>
+        </tbody></table>
+        
+        <br><br>
         Template from <a target="_blank" href="https://jonbarron.info/">Jon Barron</a>.
       </td>
     </tr>
